@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Lissy ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 42px;
+        }
+        h2 {
+            font-weight: normal;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin: 15px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #28a745;
+            color: white;
+        }
+        #no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hey Lissy 💖</h2>
+    <h1>Bri has a very important question...</h1>
+    <h1>Will you be my Valentine? 🌹</h1>
+
+    <button id="yes" onclick="yesClicked()">YES 💘</button>
+    <button id="no" onmouseover="moveButton()">NO 😢</button>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = `
+                <h1>YAYYYY LISSY SAID YES!! ❤️😍</h1>
+                <h2>You just made Bri the happiest person ever 🥹💞</h2>
+                <p>Happy Valentine’s Day, my love 🌹</p>
+            `;
+        }
+
+        function moveButton() {
+            var button = document.getElementById("no");
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
